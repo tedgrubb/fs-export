@@ -1,0 +1,11 @@
+{
+  "name": "fs-export",
+  "version": "1.0.0",
+  "description": "Export your original Foodspotting photos",
+  "main": "export.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ted Grubb",
+  "license": "ISC"
+}
