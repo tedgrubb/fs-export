@@ -10,10 +10,15 @@ if (user === '') {
 
 const profileURL = `http://www.foodspotting.com/people/${user}/reviews.json`;
 
-const tmp = './tmp/images';
+const tmp = './tmp';
+const images = './tmp/images';
 
 // create directory if it doesn't exist;
-if (!fs.existsSync(tmp)) fs.mkdirSync(tmp);
+if (!fs.existsSync(tmp)) {
+  fs.mkdir(tmp, () => {
+    fs.mkdirSync(images);
+  });
+}
 
 // Remove any previously generated html file
 fs.unlink('./tmp/foodspotting.html', (err) => {});
